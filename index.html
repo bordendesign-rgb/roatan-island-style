@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roatan Island Style Tours | Premier Island Excursions & Charters</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="rist.logo.jpg" />
+
+  <!-- Social Sharing Meta Tags (Open Graph & Twitter Cards) -->
+  <meta property="og:title" content="Roatan Island Style Tours | Premier Island Excursions & Charters" />
+  <meta property="og:description" content="Custom island charters, pristine beaches, turquoise waters, and genuine local guide hospitality in Roatan, Honduras." />
+  <meta property="og:image" content="rist.logo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roatan Island Style Tours | Premier Island Excursions & Charters" />
+  <meta name="twitter:description" content="Custom island charters, pristine beaches, turquoise waters, and genuine local guide hospitality in Roatan, Honduras." />
+  <meta name="twitter:image" content="rist.logo.jpg" />
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #f97316;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --dark-navy: #0f172a;
+      --card-bg: #ffffff;
+      --light-bg: #f8fafc;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--dark-navy);
+      color: #94a3b8;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 1.5rem;
+    }
+
+    .top-bar-info i {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .top-bar-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-bar-socials a {
+      color: #94a3b8;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .top-bar-socials a:hover {
+      color: #ffffff;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    /* Scaled & Clear Logo Container */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 75px; /* Scaled up for clarity */
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links li {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      padding: 0.5rem 0.25rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn-header {
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: white !important;
+      padding: 0.75rem 1.6rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+      transition: var(--transition);
+    }
+
+    .btn-header:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+    }
+
+    /* WhatsApp Button Styles */
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white !important;
+      padding: 0.65rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.75) 100%), 
+                  url('west.bay.3.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 4rem 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #e2e8f0;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Main Sections */
+    section {
+      max-width: 1280px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-subtitle {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      letter-spacing: -0.5px;
+    }
+
+    /* Tour Cards Grid */
+    .grid-tours {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .tour-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f1f5f9;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .tour-card:hover .card-img-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .card-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(6px);
+      color: white;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .card-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-body h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--dark-navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .card-body p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 1.25rem;
+    }
+
+    .card-link {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .card-link:hover {
+      color: var(--primary-dark);
+      gap: 10px;
+    }
+
+    /* Feature Highlights Gallery */
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 280px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 1rem 1rem 1rem;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-navy);
+      color: #94a3b8;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 2rem auto 0 auto;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 992px) {
+      nav {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
+
+      .top-bar-info span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+      }
+
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+
+      .logo-img {
+        height: 60px;
+      }
+
+      section {
+        margin: 3rem auto;
+        padding: 0 1.25rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .grid-tours {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span><i class="fa-solid fa-location-dot"></i> Roatan, Honduras</span>
+      <span><i class="fa-solid fa-envelope"></i> info@roatanislandstyletours.com</span>
+    </div>
+    <div class="top-bar-socials">
+<a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+  <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+</a>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo-container">
+        <!-- Exact file name explicitly matched -->
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="margin-top:0; width:100%; max-width:100%;">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-star" style="color: #f59e0b;"></i> Top Rated Roatan Excursions
+      </div>
+      <h1>Experience Roatan in Unmatched Island Style</h1>
+      <p>Custom island charters, pristine beaches, turquoise waters, and genuine local guide hospitality.</p>
+      <div class="hero-cta">
+        <a href="#tours" class="btn-primary">Explore Our Excursions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Excursions Section -->
+  <section id="tours">
+    <div class="section-header">
+      <span class="section-subtitle">Unforgettable Journeys</span>
+      <h2 class="section-title">Featured Private Excursions</h2>
+    </div>
+
+    <div class="grid-tours">
+
+      <!-- Tour Card 1: West Bay Beach Day -->
+      <div class="tour-card">
+        <div class="card-img-wrapper">
+          <!-- Exact file name match -->
+          <img src="nurse-sharks.jpeg" alt="Pigeon Cay Nurse Sharks Experience">
+          <span class="card-tag">Best Seller</span>
+        </div>
+        <div class="card-body">
+          <h3>Swimming with Nurse Sharks at Pigeon Cay</h3>
+          <p>Embark on an unforgettable adventure to Pigeon Cay, where you can swim alongside harmless nurse sharks in pristine, crystal-clear turquoise waters.</p>
+          <div class="card-footer">
+            <span style="font-weight:700; color:var(--dark-navy);"><i class="fa-regular fa-clock"></i> Full/Half Day</span>
+            <a href="tours.html" class="card-link">Reserve <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Card 2: East End Mangrove & Boat Tours -->
+      <div class="tour-card">
+        <div class="card-img-wrapper">
+          <!-- Exact file name match -->
+          <img src="mangrove.tunnel.tour.2.jpg" alt="East End Mangrove and Boat Tour">
+          <span class="card-tag">Custom Tours</span>
+        </div>
+        <div class="card-body">
+          <h3>East End Mangroves & Coastal Boat Tour</h3>
+          <p>Navigate the historic, winding mangrove channels and picturesque coastal waterways of Roatan's East End with an experienced local guide.</p>
+          <div class="card-footer">
+            <span style="font-weight:700; color:var(--dark-navy);"><i class="fa-regular fa-clock"></i> Flexible Hours</span>
+            <a href="tours.html" class="card-link">Reserve <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Card 3: VIP Deck & Celebrations -->
+      <div class="tour-card">
+        <div class="card-img-wrapper">
+          <!-- Exact file name match -->
+          <img src="west.bay.tour.jpg" alt="VIP Group & Birthday Tour">
+          <span class="card-tag">Group Special</span>
+        </div>
+        <div class="card-body">
+          <h3>Private Group & Celebration Parties</h3>
+          <p>Celebrate birthdays, family reunions, or special events at top waterfront dining spots and private beach decks.</p>
+          <div class="card-footer">
+            <span style="font-weight:700; color:var(--dark-navy);"><i class="fa-solid fa-cake-candles"></i> Private Events</span>
+            <a href="tours.html" class="card-link">Reserve <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Photo Gallery Showcase -->
+  <section id="gallery">
+    <div class="section-header">
+      <span class="section-subtitle">Island Memories</span>
+      <h2 class="section-title">A Glimpse of the Experience</h2>
+    </div>
+
+    <div class="gallery-masonry">
+      <div class="gallery-item">
+        <img src="west.bay.2.jpg" alt="West Bay White Sand Beach">
+        <div class="gallery-caption">Pristine Shorelines</div>
+      </div>
+      <div class="gallery-item">
+        <img src="roatan.ocean.jpg" alt="Clear Ocean Boat Tour">
+        <div class="gallery-caption">Crystal Waters</div>
+      </div>
+      <div class="gallery-item">
+        <img src="mangrove.tunnel.tour.jpg" alt="Family Experience">
+        <div class="gallery-caption">Friends And Family</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
+        <p>Delivering authentic, premium, and custom island tours across Roatan, Honduras.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact & Booking</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Direct Booking Available
+            </a>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> Roatan, Bay Islands, Honduras</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roatan Island Style Tours. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

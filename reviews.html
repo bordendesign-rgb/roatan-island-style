@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Reviews | Roatan Island Style Tours</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="rist.logo.jpg" />
+
+  <!-- Social Sharing Meta Tags -->
+  <meta property="og:title" content="Customer Reviews | Roatan Island Style Tours" />
+  <meta property="og:description" content="Read authentic reviews from guests who explored Roatan with us, or leave your own review!" />
+  <meta property="og:image" content="rist.logo.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #f97316;
+      --star-color: #f59e0b;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --dark-navy: #0f172a;
+      --card-bg: #ffffff;
+      --light-bg: #f8fafc;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--dark-navy);
+      color: #94a3b8;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 1.5rem;
+    }
+
+    .top-bar-info i {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .top-bar-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-bar-socials a {
+      color: #94a3b8;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .top-bar-socials a:hover {
+      color: #ffffff;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      padding: 0.5rem 0.25rem;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white !important;
+      padding: 0.65rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Page Hero */
+    .page-hero {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%), 
+                  url('roatan.ocean.jpg') center/cover no-repeat;
+      text-align: center;
+      color: white;
+      padding: 4rem 1.5rem;
+    }
+
+    .page-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-hero p {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1100px;
+      margin: 3.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Review Form Card (Netlify Form) */
+    .review-form-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      margin-bottom: 4rem;
+    }
+
+    .form-header {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .form-header h2 {
+      font-size: 1.8rem;
+      color: var(--dark-navy);
+      font-weight: 800;
+    }
+
+    .form-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .review-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--dark-navy);
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea,
+    .form-group input[type="file"] {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      background: #f8fafc;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Interactive Star Rating Selector */
+    .star-rating-input {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    .star-rating-input input {
+      display: none;
+    }
+
+    .star-rating-input label {
+      font-size: 1.75rem;
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .star-rating-input label:hover,
+    .star-rating-input label:hover ~ label,
+    .star-rating-input input:checked ~ label {
+      color: var(--star-color);
+    }
+
+    .btn-submit {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+      align-self: center;
+      margin-top: 0.5rem;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Existing Reviews Feed */
+    .reviews-feed-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .reviews-feed-header h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+    }
+
+    .reviews-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .review-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .review-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+    }
+
+    .review-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .review-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .review-stars {
+      color: var(--star-color);
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .review-quote {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .review-author {
+      font-weight: 800;
+      color: var(--dark-navy);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .review-author i {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-navy);
+      color: #94a3b8;
+      padding: 4rem 2rem 2rem 2rem;
+      margin-top: 5rem;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 2rem auto 0 auto;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 850px) {
+      .review-card {
+        grid-template-columns: 1fr;
+      }
+
+      .review-img-wrapper {
+        height: 240px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+
+      .review-form-card {
+        padding: 1.5rem;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span><i class="fa-solid fa-location-dot"></i> Roatan, Honduras</span>
+      <span><i class="fa-solid fa-envelope"></i> info@roatanislandstyletours.com</span>
+    </div>
+    <div class="top-bar-socials">
+<a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+  <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+</a>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo-container">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Guest Experiences</h1>
+    <p>Read real stories from travelers who explored Roatan with us, or share your own adventure!</p>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Netlify Form: Submit a Review -->
+    <section class="review-form-card">
+      <div class="form-header">
+        <h2>Leave Us a Review</h2>
+        <p>Traveled with us recently? We'd love to hear about your experience!</p>
+      </div>
+
+      <!-- Netlify Form Setup -->
+      <form class="review-form" name="tour-reviews" method="POST" data-netlify="true" enctype="multipart/form-data">
+        <!-- Hidden field for Netlify bots -->
+        <input type="hidden" name="form-name" value="tour-reviews" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reviewer-name">Your Name</label>
+            <input type="text" id="reviewer-name" name="name" placeholder="e.g. John Smith" required />
+          </div>
+
+          <div class="form-group">
+            <label for="reviewer-photo">Upload Your Trip Photo</label>
+            <input type="file" id="reviewer-photo" name="photo" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Your Rating</label>
+          <div class="star-rating-input">
+            <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 Stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 Stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 Stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 Stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 Star">★</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="review-message">Your Review</label>
+          <textarea id="review-message" name="message" placeholder="Tell us about your tour, your guide, and your favorite moments..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Submit Review</button>
+      </form>
+    </section>
+
+    <!-- Published Customer Reviews List -->
+    <section class="reviews-feed">
+      <div class="reviews-feed-header">
+        <h2>What Our Guests Say</h2>
+      </div>
+
+      <div class="reviews-list">
+
+        <!-- Review 1: Tom Duffy -->
+        <article class="review-card">
+          <div class="review-img-wrapper">
+            <img src="rum.company.jpg" alt="Tom Duffy's Roatan Island Style Tour">
+          </div>
+          <div class="review-content">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">"They did an excellent job of giving us a tour of the island with the kind of insight that someone who grew up on the island would have. Prompt, efficient, fair price, and fun guys to be around!"</p>
+            <div class="review-author">
+              <i class="fa-solid fa-circle-check"></i> Tom Duffy
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 2: alohagirl63 -->
+        <article class="review-card">
+          <div class="review-img-wrapper">
+            <img src="roatan.sign.jpg" alt="alohagirl63's Roatan Island Style Tour">
+          </div>
+          <div class="review-content">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">"If you only have one day in Roatan, let me introduce you to Kerwin & Charleston—lively 4th generation Roatanians! After researching private tour companies, I chose Roatan Island Style Tours. Kerwin was lightning fast answering all my questions, ensuring top-tier customer service before we even arrived. Being 4th generation, they share vivid, entertaining stories about island lore and family heritage with zero rush ever. If you want a personalized, stress-free island experience, book with them!"</p>
+            <div class="review-author">
+              <i class="fa-solid fa-circle-check"></i> alohagirl63
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
+        <p>Delivering authentic, premium, and custom island tours across Roatan, Honduras.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact & Booking</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Direct Booking Available
+            </a>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> Roatan, Bay Islands, Honduras</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roatan Island Style Tours. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

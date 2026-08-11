@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Tours | Roatan Island Style Tours</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="rist.logo.jpg" />
+
+  <!-- Social Sharing Meta Tags -->
+  <meta property="og:title" content="Our Tours | Roatan Island Style Tours" />
+  <meta property="og:description" content="Explore custom island charters, mangrove tunnel tours, Pigeon Cay trips, and Port Royal adventures with Roatan Island Style Tours." />
+  <meta property="og:image" content="rist.logo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Tours | Roatan Island Style Tours" />
+  <meta name="twitter:description" content="Explore custom island charters, mangrove tunnel tours, Pigeon Cay trips, and Port Royal adventures with Roatan Island Style Tours." />
+  <meta name="twitter:image" content="rist.logo.jpg" />
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #f97316;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --dark-navy: #0f172a;
+      --card-bg: #ffffff;
+      --light-bg: #f8fafc;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--dark-navy);
+      color: #94a3b8;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 1.5rem;
+    }
+
+    .top-bar-info i {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .top-bar-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-bar-socials a {
+      color: #94a3b8;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .top-bar-socials a:hover {
+      color: #ffffff;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark-navy);
+      cursor: pointer;
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    /* Page Hero */
+    .page-hero {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.85) 100%), 
+                  url('roatan.ocean.jpg') center/cover no-repeat;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-hero p {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Notice Banner */
+    .inclusions-banner {
+      max-width: 1280px;
+      margin: -2.5rem auto 3rem auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .inclusions-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 1.25rem 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .inclusions-card i {
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+
+    .inclusions-card p {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark-navy);
+      margin: 0;
+    }
+
+    /* Main Section */
+    section {
+      max-width: 1280px;
+      margin: 3rem auto 5rem auto;
+      padding: 0 2rem;
+    }
+
+    /* Tour List Styling */
+    .tours-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .tour-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f1f5f9;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      transition: var(--transition);
+    }
+
+    .tour-card:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+    }
+
+    /* Slideshow Component */
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      background: var(--dark-navy);
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Navigation Arrows */
+    .prev-btn, .next-btn {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background: rgba(15, 23, 42, 0.6);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+      z-index: 5;
+    }
+
+    .prev-btn:hover, .next-btn:hover {
+      background: var(--primary);
+    }
+
+    .prev-btn { left: 15px; }
+    .next-btn { right: 15px; }
+
+    /* Indicator Dots */
+    .dots-container {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      z-index: 5;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      display: inline-block;
+      transition: var(--transition);
+    }
+
+    .dot.active, .dot:hover {
+      background-color: #ffffff;
+      width: 24px;
+      border-radius: 5px;
+    }
+
+    /* Tour Details */
+    .tour-details {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tour-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .tour-description {
+      color: var(--text-main);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tour-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      background: var(--light-bg);
+      padding: 1.25rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.925rem;
+    }
+
+    .meta-item i {
+      color: var(--primary);
+      margin-top: 3px;
+    }
+
+    .meta-item strong {
+      display: block;
+      color: var(--dark-navy);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tour-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 1.25rem;
+    }
+
+    .tour-price-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-price-lbl {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .tour-price-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .btn-book {
+      background: var(--primary);
+      color: white;
+      padding: 0.85rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn-book:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+    }
+
+    /* Toast Notification */
+    .toast-notification {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--dark-navy);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 2000;
+      transform: translateY(150%);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-left: 4px solid var(--accent);
+    }
+
+    .toast-notification.show {
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-navy);
+      color: #94a3b8;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 2rem auto 0 auto;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem 0 0.5rem 0;
+        border-top: 1px solid #e2e8f0;
+        margin-top: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .tour-card {
+        grid-template-columns: 1fr;
+      }
+
+      .slideshow-container {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
+
+      .top-bar-info span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+      }
+
+      .page-hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .logo-img {
+        height: 60px;
+      }
+
+      .tour-details {
+        padding: 1.5rem;
+      }
+
+      .tour-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .tour-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-book {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span><i class="fa-solid fa-location-dot"></i> Roatan, Honduras</span>
+      <span><i class="fa-solid fa-envelope"></i> info@roatanislandstyletours.com</span>
+    </div>
+    <div class="top-bar-socials">
+    <a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+    <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+</a>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo-container">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tours.html" class="active">Tours</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <div class="page-hero">
+      <h1>Our Excursions & Charters</h1>
+      <p>Discover hand-crafted island adventures led by born-and-raised local guides.</p>
+    </div>
+
+    <!-- Inclusions Highlight Banner -->
+    <div class="inclusions-banner">
+      <div class="inclusions-card">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>All tours include cold water and beverages, snorkeling gear and life vests onboard.</p>
+      </div>
+    </div>
+
+    <!-- Tours Listing -->
+    <section>
+      <div class="tours-container">
+
+        <!-- Tour 1: The East End Experience -->
+        <div class="tour-card">
+          <div class="slideshow-container" id="slideshow-1">
+            <div class="slide active">
+              <img src="nurse-sharks.jpeg" alt="The East End Experience - Nurse Sharks">
+            </div>
+            <div class="slide">
+              <img src="nurse-sharks-2.jpeg" alt="The East End Experience - Nurse Sharks Swim" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="nurse-sharks-3.jpeg" alt="The East End Experience - Snorkeling" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="nurse-sharks-4.jpeg" alt="The East End Experience - Wildlife Encounter" loading="lazy">
+            </div>
+
+            <button class="prev-btn" onclick="changeSlide('slideshow-1', -1)" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-btn" onclick="changeSlide('slideshow-1', 1)" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="dots-container">
+              <span class="dot active" onclick="currentSlide('slideshow-1', 0)" aria-label="Slide 1"></span>
+              <span class="dot" onclick="currentSlide('slideshow-1', 1)" aria-label="Slide 2"></span>
+              <span class="dot" onclick="currentSlide('slideshow-1', 2)" aria-label="Slide 3"></span>
+              <span class="dot" onclick="currentSlide('slideshow-1', 3)" aria-label="Slide 4"></span>
+            </div>
+          </div>
+
+          <div class="tour-details">
+            <div>
+              <h2 class="tour-title">The East End Experience</h2>
+              <p class="tour-description">
+                On this tour we take our guests to Pigeon Keys where they can swim, snorkel, and get up close and personal with local wildlife, including friendly nurse sharks!
+              </p>
+
+              <div class="tour-meta">
+                <div class="meta-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <strong>Duration</strong>
+                    Half Day to Full Day
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-plane-departure"></i>
+                  <div>
+                    <strong>Departure Time</strong>
+                    9:00 AM (Recommended)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tour-footer">
+              <div class="tour-price-box">
+                <span class="tour-price-lbl">Pricing</span>
+                <span class="tour-price-val">$400.00 – $600.00</span>
+              </div>
+              <a href="contact.html?tour=The%20East%20End%20Experience" class="btn-book">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 2: East End Mangroves & Coastal Boat Tour -->
+        <div class="tour-card">
+          <div class="slideshow-container" id="slideshow-2">
+            <div class="slide active">
+              <img src="mangrove.tunnel.tour.8.jpeg" alt="East End Mangroves & Coastal Boat Tour - Tunnels">
+            </div>
+            <div class="slide">
+              <img src="mangrove.tunnel.tour.6.jpg" alt="East End Mangroves - Navigation" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="mangrove.snorkeling.jpg" alt="East End Mangroves - Swimming Hole" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="mangrove.tunnel.tour.3.jpg" alt="East End Mangroves - Views" loading="lazy">
+            </div>
+
+            <button class="prev-btn" onclick="changeSlide('slideshow-2', -1)" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-btn" onclick="changeSlide('slideshow-2', 1)" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="dots-container">
+              <span class="dot active" onclick="currentSlide('slideshow-2', 0)" aria-label="Slide 1"></span>
+              <span class="dot" onclick="currentSlide('slideshow-2', 1)" aria-label="Slide 2"></span>
+              <span class="dot" onclick="currentSlide('slideshow-2', 2)" aria-label="Slide 3"></span>
+              <span class="dot" onclick="currentSlide('slideshow-2', 3)" aria-label="Slide 4"></span>
+            </div>
+          </div>
+
+          <div class="tour-details">
+            <div>
+              <h2 class="tour-title">East End Mangroves & Coastal Boat Tour</h2>
+              <p class="tour-description">
+                A wound-down and relaxing journey as we take our guests through the famous and historic mangrove tunnels into a pristine local swimming hole. This tour can also include bar and food stops at iconic local restaurants along the water.
+              </p>
+
+              <div class="tour-meta">
+                <div class="meta-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <strong>Duration</strong>
+                    Flexible Schedule
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div>
+                    <strong>Includes Options</strong>
+                    Bar & Food Stops
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tour-footer">
+              <div class="tour-price-box">
+                <span class="tour-price-lbl">Pricing</span>
+                <span class="tour-price-val">$35.00 <span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/ Adult</span> &bull; $20.00 <span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/ Child</span></span>
+              </div>
+              <a href="contact.html?tour=East%20End%20Mangroves%20%26%20Coastal%20Boat%20Tour" class="btn-book">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 3: Port Royal Adventure -->
+        <div class="tour-card">
+          <div class="slideshow-container" id="slideshow-3">
+            <div class="slide active">
+              <img src="roatan.ocean2.jpg" alt="Port Royal Adventure - Ocean View">
+            </div>
+            <div class="slide">
+              <img src="roatan.sunset.2.jpg" alt="Port Royal Adventure - Sunset" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="roatan.ocean.jpg" alt="Port Royal Adventure - Coastline" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="mangrove.tunnel.jpg" alt="Port Royal Adventure - Mangroves" loading="lazy">
+            </div>
+
+            <button class="prev-btn" onclick="changeSlide('slideshow-3', -1)" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-btn" onclick="changeSlide('slideshow-3', 1)" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="dots-container">
+              <span class="dot active" onclick="currentSlide('slideshow-3', 0)" aria-label="Slide 1"></span>
+              <span class="dot" onclick="currentSlide('slideshow-3', 1)" aria-label="Slide 2"></span>
+              <span class="dot" onclick="currentSlide('slideshow-3', 2)" aria-label="Slide 3"></span>
+              <span class="dot" onclick="currentSlide('slideshow-3', 3)" aria-label="Slide 4"></span>
+            </div>
+          </div>
+
+          <div class="tour-details">
+            <div>
+              <h2 class="tour-title">Port Royal Adventure</h2>
+              <p class="tour-description">
+                Journey into historic Port Royal, legendary for pirate activity back in the day! This trip features multiple reef snorkeling stops and breathtaking sightseeing spots along the untouched eastern shore.
+              </p>
+
+              <div class="tour-meta">
+                <div class="meta-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <strong>Duration</strong>
+                    3 – 4 Hours (Set Time)
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-users"></i>
+                  <div>
+                    <strong>Group Capacity</strong>
+                    1 to 10 Persons
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tour-footer">
+              <div class="tour-price-box">
+                <span class="tour-price-lbl">Pricing</span>
+                <span class="tour-price-val">$300.00 <span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">(Flat Rate)</span></span>
+              </div>
+              <a href="contact.html?tour=Port%20Royal%20Adventure" class="btn-book">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 4: Personalized Tour -->
+        <div class="tour-card">
+          <div class="slideshow-container" id="slideshow-4">
+            <div class="slide active">
+              <img src="west.bay.tour.jpg" alt="Personalized Tour - Custom Outing">
+            </div>
+            <div class="slide">
+              <img src="west.bay.2.jpg" alt="Personalized Tour - Group Celebration" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="mangrove.tunnel.tour.jpg" alt="Personalized Tour - Island Highlights" loading="lazy">
+            </div>
+            <div class="slide">
+              <img src="west.bay.3.jpg" alt="Personalized Tour - Tailored Experience" loading="lazy">
+            </div>
+
+            <button class="prev-btn" onclick="changeSlide('slideshow-4', -1)" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-btn" onclick="changeSlide('slideshow-4', 1)" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="dots-container">
+              <span class="dot active" onclick="currentSlide('slideshow-4', 0)" aria-label="Slide 1"></span>
+              <span class="dot" onclick="currentSlide('slideshow-4', 1)" aria-label="Slide 2"></span>
+              <span class="dot" onclick="currentSlide('slideshow-4', 2)" aria-label="Slide 3"></span>
+              <span class="dot" onclick="currentSlide('slideshow-4', 3)" aria-label="Slide 4"></span>
+            </div>
+          </div>
+
+          <div class="tour-details">
+            <div>
+              <h2 class="tour-title">Personalized Tour</h2>
+              <p class="tour-description">
+                Designed for those looking to celebrate a birthday, family reunion, or a group of friends who want an experience 100% personalized to them.
+              </p>
+
+              <div class="tour-meta">
+                <div class="meta-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <strong>Duration</strong>
+                    Varies
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-sliders"></i>
+                  <div>
+                    <strong>Itinerary</strong>
+                    100% Customized
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tour-footer">
+              <div class="tour-price-box">
+                <span class="tour-price-lbl">Pricing</span>
+                <span class="tour-price-val">Varies</span>
+              </div>
+              <a href="contact.html?tour=Personalized%20Tour" class="btn-book">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
+        <p>Delivering authentic, premium, and custom island tours across Roatan, Honduras.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact & Booking</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Direct Booking Available
+            </a>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> Roatan, Bay Islands, Honduras</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roatan Island Style Tours. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Box -->
+  <div id="toast" class="toast-notification">
+    <i class="fa-solid fa-circle-info" style="color: var(--accent); font-size: 1.2rem;"></i>
+    <span id="toastMsg">This page is under construction. Redirecting...</span>
+  </div>
+
+  <script>
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Slideshow Logic
+    const slideshowStates = {};
+
+    function initSlideshows() {
+      const containers = document.querySelectorAll('.slideshow-container');
+      containers.forEach(container => {
+        const id = container.id;
+        slideshowStates[id] = 0;
+      });
+    }
+
+    function showSlide(containerId, index) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      const slides = container.querySelectorAll('.slide');
+      const dots = container.querySelectorAll('.dot');
+
+      if (!(containerId in slideshowStates)) {
+        slideshowStates[containerId] = 0;
+      }
+
+      if (index >= slides.length) slideshowStates[containerId] = 0;
+      else if (index < 0) slideshowStates[containerId] = slides.length - 1;
+      else slideshowStates[containerId] = index;
+
+      const activeIdx = slideshowStates[containerId];
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === activeIdx);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIdx);
+      });
+    }
+
+    function changeSlide(containerId, step) {
+      if (!(containerId in slideshowStates)) slideshowStates[containerId] = 0;
+      showSlide(containerId, slideshowStates[containerId] + step);
+    }
+
+    function currentSlide(containerId, index) {
+      showSlide(containerId, index);
+    }
+
+    // Toast Notification Utility
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      if (toast && toastMsg) {
+        toastMsg.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3000);
+      }
+    }
+
+    // Initialize slideshows once DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', initSlideshows);
+  </script>
+</body>
+</html>

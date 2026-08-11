@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Roatan Island Style Tours</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="rist.logo.jpg" />
+
+  <!-- Social Sharing Meta Tags -->
+  <meta property="og:title" content="About Us | Roatan Island Style Tours" />
+  <meta property="og:description" content="Meet the local team behind Roatan Island Style Tours. Born and raised on Roatan, delivering genuine island hospitality since 2019." />
+  <meta property="og:image" content="rist.logo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | Roatan Island Style Tours" />
+  <meta name="twitter:description" content="Meet the local team behind Roatan Island Style Tours. Born and raised on Roatan, delivering genuine island hospitality since 2019." />
+  <meta name="twitter:image" content="rist.logo.jpg" />
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #f97316;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --dark-navy: #0f172a;
+      --card-bg: #ffffff;
+      --light-bg: #f8fafc;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--dark-navy);
+      color: #94a3b8;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 1.5rem;
+    }
+
+    .top-bar-info i {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .top-bar-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-bar-socials a {
+      color: #94a3b8;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .top-bar-socials a:hover {
+      color: #ffffff;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark-navy);
+      cursor: pointer;
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    /* Inner Page Hero Header */
+    .page-hero {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.85) 100%), 
+                  url('west.bay.tour.jpg') center/cover no-repeat;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-hero p {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Sections */
+    section {
+      max-width: 1280px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+    }
+
+    /* About Story Grid */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+
+    .about-badge-card {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--card-bg);
+      padding: 1.25rem 1.75rem;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .about-badge-card i {
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    .about-badge-card .num {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      line-height: 1;
+    }
+
+    .about-badge-card .txt {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .about-content span.section-subtitle {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .about-content h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-content p {
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    /* Core Pillars / Values */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .value-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      border: 1px solid #f1f5f9;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .value-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(2, 132, 199, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin: 0 auto 1.25rem auto;
+    }
+
+    .value-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Crew / Team Section */
+    .team-section {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 4rem 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      border: 1px solid #f1f5f9;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-subtitle {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      letter-spacing: -0.5px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .team-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--light-bg);
+      border-radius: var(--radius);
+      border: 1px solid #e2e8f0;
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .team-avatar-img {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 1.25rem auto;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .team-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark-navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-card .role {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .team-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Toast Notification for Unbuilt Pages */
+    .toast-notification {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--dark-navy);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 2000;
+      transform: translateY(150%);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-left: 4px solid var(--accent);
+    }
+
+    .toast-notification.show {
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-navy);
+      color: #94a3b8;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 2rem auto 0 auto;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 992px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem 0 0.5rem 0;
+        border-top: 1px solid #e2e8f0;
+        margin-top: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-badge-card {
+        right: 10px;
+        bottom: -15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
+
+      .top-bar-info span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+      }
+
+      .page-hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .logo-img {
+        height: 60px;
+      }
+
+      section {
+        margin: 3rem auto;
+        padding: 0 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span><i class="fa-solid fa-location-dot"></i> Roatan, Honduras</span>
+      <span><i class="fa-solid fa-envelope"></i> info@roatanislandstyletours.com</span>
+    </div>
+    <div class="top-bar-socials">
+<a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+  <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+</a>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo-container">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <div class="page-hero">
+    <h1>Our Island Story</h1>
+    <p>Locally owned, family operated, and dedicated to showing you the very best of Roatan in ultimate style.</p>
+  </div>
+
+  <!-- Story Section -->
+  <section>
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="roatan.sign.2.jpg" alt="Roatan Island Style Tours Experience">
+        <div class="about-badge-card">
+          <i class="fa-solid fa-anchor"></i>
+          <div>
+            <div class="num">100% Local</div>
+            <div class="txt">Family Owned & Operated</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-subtitle">Born & Raised on Roatan</span>
+        <h2>Welcome to Roatan Island Style Tours</h2>
+        <p>
+          Founded in 2019 by co-founders <strong>Kerwin Borden</strong> and <strong>Charleston Jackson</strong>, Roatan Island Style Tours was built on a simple promise: to share the raw beauty, vibrant turquoise waters, and warm hospitality of our island home with visitors from around the globe.
+        </p>
+        <p>
+          Like many local businesses, our initial momentum paused during the global pandemic. But our passion for host hospitality and island life never wavered. Today, we are back stronger than ever, giving our guests exclusive, customized access to Roatan's finest beaches, hidden bays, and private coastal tours.
+        </p>
+        <p>
+          As a locally owned outfit, our main priority is to deliver far more than a standard excursion. We bring you personalized customer service, unmatched local knowledge, and an incredible adventure where you can truly relax and have a blast in genuine island style.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section>
+    <div class="section-header">
+      <span class="section-subtitle">Why Experience Island Style?</span>
+      <h2 class="section-title">The Island Style Advantage</h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+        <h3>Personalized Hospitality</h3>
+        <p>No crowded buses or generic schedules. Every itinerary is tailored around your group's pace, preferences, and desires.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon"><i class="fa-solid fa-compass"></i></div>
+        <h3>True Local Knowledge</h3>
+        <p>Navigated by born-and-raised islanders who know every secluded reef, local secret, and pristine stretch of sand.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Safe & Seamless Charters</h3>
+        <p>From dock pickups to excursions, your comfort, safety, and peace of mind are always our highest priorities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Crew -->
+  <section class="team-section">
+    <div class="section-header">
+      <span class="section-subtitle">Behind the Helm</span>
+      <h2 class="section-title">Meet Your Local Crew</h2>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="kerwin-borden.jpeg" alt="Kerwin Borden" class="team-avatar-img">
+        <h3>Kerwin Borden</h3>
+        <span class="role">Co-Founder & Host</span>
+        <p>Ensuring your trip logistics, bookings, and custom requests run seamlessly from the moment you reach out to us.</p>
+      </div>
+
+      <div class="team-card">
+        <img src="capt-kerwin-sr.jpeg" alt="Captain Kerwin Borden Sr." class="team-avatar-img">
+        <h3>Captain Kerwin Borden Sr.</h3>
+        <span class="role">Lead Captain</span>
+        <p>A shrimp boat captain for over 30 years with decades of sea experience along Roatan's coastline, Captain Kerwin Sr. guides your journey safely with expert navigation.</p>
+      </div>
+
+      <div class="team-card">
+        <img src="charleston-jack.jpeg" alt="Charleston Jackson" class="team-avatar-img">
+        <h3>Charleston Jackson</h3>
+        <span class="role">Co-Founder & Island Guide</span>
+        <p>Passionate about local culture and guest experiences, Charleston makes sure every tour is loaded with fun memories.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
+        <p>Delivering authentic, premium, and custom island tours across Roatan, Honduras.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact & Booking</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Direct Booking Available
+            </a>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> Roatan, Bay Islands, Honduras</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roatan Island Style Tours. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Box -->
+  <div id="toast" class="toast-notification">
+    <i class="fa-solid fa-circle-info" style="color: var(--accent); font-size: 1.2rem;"></i>
+    <span id="toastMsg">This page is under construction. Redirecting to home section...</span>
+  </div>
+
+  <script>
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Fallback navigation handler for unbuilt standalone pages
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+
+    function showToast(message) {
+      toastMsg.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      const targetFallback = link.getAttribute('data-target');
+
+      // Check if clicking on unbuilt external .html pages (other than index.html and about.html)
+      if (href.endsWith('.html') && href !== 'index.html' && href !== 'about.html') {
+        link.addEventListener('click', function(e) {
+          // If the page file doesn't exist yet, smoothly route to index page section or keep active
+          fetch(href, { method: 'HEAD' })
+            .then(response => {
+              if (!response.ok) {
+                e.preventDefault();
+                showToast(`The ${link.textContent.trim()} page is coming soon! Redirecting to section...`);
+                setTimeout(() => {
+                  window.location.href = targetFallback || 'index.html';
+                }, 1200);
+              }
+            })
+            .catch(() => {
+              e.preventDefault();
+              if (targetFallback) {
+                window.location.href = targetFallback;
+              } else {
+                showToast(`The ${link.textContent.trim()} page is coming soon!`);
+              }
+            });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
