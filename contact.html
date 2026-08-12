@@ -856,12 +856,20 @@
           }
         });
 
-        // Direct fetch from Netlify serverless function querying live Zoho REST API
+        // Fetch availability from Netlify Function and sanitize dates for Flatpickr
         fetch('/.netlify/functions/get-availability')
           .then(res => res.json())
           .then(data => {
-            if (data.bookedDates && data.bookedDates.length > 0) {
-              fp.set('disable', data.bookedDates);
+            if (data && Array.isArray(data.bookedDates) && data.bookedDates.length > 0) {
+              const datesToDisable = data.bookedDates.map(dateStr => {
+                if (typeof dateStr === 'string') {
+                  return dateStr.trim().split('T')[0];
+                }
+                return dateStr;
+              });
+
+              fp.set('disable', datesToDisable);
+              fp.redraw();
             }
           })
           .catch(err => {
