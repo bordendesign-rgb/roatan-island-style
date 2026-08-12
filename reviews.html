@@ -129,6 +129,11 @@
       align-items: center;
     }
 
+    .nav-links li {
+      display: flex;
+      align-items: center;
+    }
+
     .nav-links a {
       text-decoration: none;
       color: var(--dark-navy);
@@ -160,6 +165,15 @@
     .btn-whatsapp:hover {
       background: var(--whatsapp-dark);
       transform: translateY(-2px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--dark-navy);
+      cursor: pointer;
     }
 
     /* Page Hero */
@@ -453,7 +467,29 @@
       font-size: 0.875rem;
     }
 
-    /* Responsive Design */
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 992px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+
     @media (max-width: 850px) {
       .review-card {
         grid-template-columns: 1fr;
@@ -466,31 +502,43 @@
       .form-row {
         grid-template-columns: 1fr;
       }
-
-      nav {
-        flex-direction: column;
-        gap: 1.25rem;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .top-bar {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
+        padding: 0.75rem 1rem;
       }
 
-      .review-form-card {
-        padding: 1.5rem;
+      .top-bar-info span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+      }
+
+      .logo-img {
+        height: 60px;
       }
 
       .page-hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.25rem;
+      }
+
+      .page-hero p {
+        font-size: 1.05rem;
+      }
+
+      .container {
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .review-form-card {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -504,12 +552,11 @@
       <span><i class="fa-solid fa-envelope"></i> info@roatanislandstyletours.com</span>
     </div>
     <div class="top-bar-socials">
-<a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-<a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
-  <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+      <a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+      <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
 </a>
-      </a>
     </div>
   </div>
 
@@ -519,7 +566,10 @@
       <a href="index.html" class="logo-container">
         <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
       </a>
-      <ul class="nav-links">
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="tours.html">Tours</a></li>
@@ -673,6 +723,19 @@
       <p>&copy; 2026 Roatan Island Style Tours. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
