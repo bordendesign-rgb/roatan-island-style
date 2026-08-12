@@ -6,12 +6,12 @@
   <title>Contact Us | Roatan Island Style Tours</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="borden-logo.png" />
+  <link rel="icon" type="image/png" href="rist.logo.jpg" />
 
   <!-- Social Sharing Meta Tags -->
   <meta property="og:title" content="Contact Us | Roatan Island Style Tours" />
   <meta property="og:description" content="Get in touch with Roatan Island Style Tours to book your private island excursion or ask any questions." />
-  <meta property="og:image" content="borden-logo.png" />
+  <meta property="og:image" content="rist.logo.jpg" />
   <meta property="og:type" content="website" />
 
   <!-- Google Fonts & Font Awesome Icons -->
@@ -312,12 +312,6 @@
       transform: translateY(-2px);
     }
 
-    .btn-submit:disabled {
-      opacity: 0.65;
-      cursor: not-allowed;
-      transform: none;
-    }
-
     /* Form Alert Message */
     .form-status {
       display: none;
@@ -331,12 +325,6 @@
       background-color: #d1fae5;
       color: #065f46;
       border: 1px solid #a7f3d0;
-    }
-    .form-status.error {
-      display: block;
-      background-color: #fef2f2;
-      color: #991b1b;
-      border: 1px solid #fecaca;
     }
 
     /* Sidebar Info Cards */
@@ -553,7 +541,9 @@
     <div class="top-bar-socials">
       <a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
       <a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+      <a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+      <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+</a>
     </div>
   </div>
 
@@ -561,7 +551,7 @@
   <header>
     <nav>
       <a href="index.html" class="logo-container">
-        <img src="borden-logo.png" alt="Roatan Island Style Tours Logo" class="logo-img">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
       </a>
       <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
@@ -732,6 +722,17 @@
 
     </div>
 
+    <!-- Google Calendar Section -->
+    <section class="map-section" style="margin-bottom: 2.5rem;">
+      <div class="map-header">
+        <h2>Tour Availability Calendar</h2>
+        <p>Check our scheduled tours and open dates before submitting your request</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://calendar.google.com/calendar/embed?src=roatanislandstyle%40gmail.com&ctz=America%2FTegucigalpa" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </section>
+
     <!-- Map Section -->
     <section class="map-section">
       <div class="map-header">
@@ -754,7 +755,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-brand">
-        <img src="borden-logo.png" alt="Roatan Island Style Tours Logo">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
         <p>Delivering authentic, premium, and custom island tours across Roatan, Honduras.</p>
       </div>
       <div>
@@ -826,17 +827,10 @@
       // Netlify Form Submission Handler (Ajax)
       const contactForm = document.getElementById('contactForm');
       const formStatus = document.getElementById('formStatus');
-      const submitBtn = document.getElementById('submitBtn');
 
       if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
           e.preventDefault();
-          
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-          }
-
           const formData = new FormData(contactForm);
 
           fetch('/', {
@@ -844,32 +838,26 @@
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString()
           })
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error(`Server returned ${res.status}`);
-            }
+          .then(() => {
             formStatus.className = 'form-status success';
             formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. We will get back to you shortly.';
             contactForm.reset();
           })
           .catch((error) => {
-            console.error('Submission error:', error);
-            formStatus.className = 'form-status error';
-            formStatus.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Oops! There was an issue submitting your form. Please try again or WhatsApp us directly.';
-          })
-          .finally(() => {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
-            }
+            formStatus.className = 'form-status';
+            formStatus.style.display = 'block';
+            formStatus.style.backgroundColor = '#fef2f2';
+            formStatus.style.color = '#991b1b';
+            formStatus.innerHTML = 'Oops! There was an issue submitting your form. Please try again or WhatsApp us directly.';
           });
         });
       }
 
-      // Real-Time Availability Integration
+      // Real-Time Zoho API Availability Integration
       const tourDateInput = document.getElementById('tour-date');
       if (tourDateInput && typeof flatpickr !== 'undefined') {
         
+        // Initialize Flatpickr Datepicker
         const fp = flatpickr(tourDateInput, {
           dateFormat: "Y-m-d",
           minDate: "today",
@@ -879,11 +867,9 @@
           }
         });
 
+        // Fetch availability from Netlify Function and sanitize dates for Flatpickr
         fetch('/.netlify/functions/get-availability')
-          .then(res => {
-            if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-            return res.json();
-          })
+          .then(res => res.json())
           .then(data => {
             if (data && Array.isArray(data.bookedDates) && data.bookedDates.length > 0) {
               const datesToDisable = data.bookedDates.map(dateStr => {
