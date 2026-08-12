@@ -542,8 +542,8 @@
       <a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
       <a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
-      <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
-</a>
+        <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+      </a>
     </div>
   </div>
 
@@ -853,7 +853,7 @@
         });
       }
 
-      // Real-Time Zoho API Availability Integration
+      // Flatpickr Datepicker with booked-dates.json Integration
       const tourDateInput = document.getElementById('tour-date');
       if (tourDateInput && typeof flatpickr !== 'undefined') {
         
@@ -867,24 +867,17 @@
           }
         });
 
-        // Fetch availability from Netlify Function and sanitize dates for Flatpickr
-        fetch('/.netlify/functions/get-availability')
+        // Fetch availability from booked-dates.json
+        fetch('/booked-dates.json')
           .then(res => res.json())
-          .then(data => {
-            if (data && Array.isArray(data.bookedDates) && data.bookedDates.length > 0) {
-              const datesToDisable = data.bookedDates.map(dateStr => {
-                if (typeof dateStr === 'string') {
-                  return dateStr.trim().split('T')[0];
-                }
-                return dateStr;
-              });
-
-              fp.set('disable', datesToDisable);
+          .then(bookedDates => {
+            if (Array.isArray(bookedDates) && bookedDates.length > 0) {
+              fp.set('disable', bookedDates);
               fp.redraw();
             }
           })
           .catch(err => {
-            console.error('Error loading live availability:', err);
+            console.error('Error loading booked dates:', err);
           });
       }
     });
