@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Brief History of Santos Guardiola | Roatan Island Style Tours</title>
+
+  <link rel="icon" type="image/jpeg" href="rist.logo.jpg" />
+
+  <meta property="og:title" content="A Brief History of Santos Guardiola" />
+  <meta property="og:description" content="Discover the rich history, pirate legacy, Paya culture, and founding of Santos Guardiola on the east side of Roatán." />
+  <meta property="og:image" content="roatan.sunset.2.jpg" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #f97316;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --dark-navy: #0f172a;
+      --card-bg: #ffffff;
+      --light-bg: #f8fafc;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--light-bg);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--dark-navy);
+      color: #94a3b8;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 1.5rem;
+    }
+
+    .top-bar-info i {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .top-bar-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-bar-socials a {
+      color: #94a3b8;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .top-bar-socials a:hover {
+      color: #ffffff;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      padding: 0.5rem 0.25rem;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white !important;
+      padding: 0.65rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--dark-navy);
+      cursor: pointer;
+    }
+
+    /* Article Hero */
+    .article-hero {
+      position: relative;
+      min-height: 55vh;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.85) 100%), 
+                  url('roatan.sunset.2.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      color: white;
+      padding: 4rem 2rem;
+    }
+
+    .article-hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+    }
+
+    .back-link:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .article-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .article-hero-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      flex-wrap: wrap;
+    }
+
+    .article-hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Article Layout */
+    .article-container {
+      max-width: 1280px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 2.3fr 1fr;
+      gap: 3rem;
+    }
+
+    .article-main {
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      border: 1px solid #f1f5f9;
+    }
+
+    .article-lead {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--dark-navy);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .article-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .article-section h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-number {
+      background: var(--primary);
+      color: white;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .article-section p {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    .inline-image {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .highlight-box {
+      background: #f0f9ff;
+      border-left: 4px solid var(--primary);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 12px 12px 0;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+      color: #0369a1;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar-widget {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid #f1f5f9;
+    }
+
+    .widget-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .widget-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .promo-card {
+      background: linear-gradient(135deg, var(--dark-navy) 0%, #1e293b 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .promo-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .promo-card p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-accent {
+      display: block;
+      text-align: center;
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: white;
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+      transition: var(--transition);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-navy);
+      color: #94a3b8;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-heading {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 2rem auto 0 auto;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 992px) {
+      .article-container {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .article-hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .article-main {
+        padding: 1.5rem;
+      }
+
+      .inline-image {
+        height: 240px;
+      }
+
+      .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span><i class="fa-solid fa-location-dot"></i> Roatan, Honduras</span>
+      <span><i class="fa-solid fa-envelope"></i> info@roatanislandstyletours.com</span>
+    </div>
+    <div class="top-bar-socials">
+      <a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+      </a>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo-container">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
+      </a>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="article-hero" style="margin-top:0; width:100%; max-width:100%;">
+    <div class="article-hero-content">
+      <a href="blog.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Blog Index</a>
+      <h1>A Brief History of Santos Guardiola</h1>
+      <div class="article-hero-meta">
+        <span><i class="fa-regular fa-calendar"></i> August 20, 2026</span>
+        <span><i class="fa-regular fa-user"></i> Roatan Island Style Tours</span>
+        <span><i class="fa-regular fa-clock"></i> 4 Min Read</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-container">
+    <main class="article-main">
+      <p class="article-lead">
+        While Roatán is globally famous for its turquoise reefs and beaches, its eastern municipality—Santos Guardiola—holds a rich history shaped by indigenous roots, European rivalry, pirate hideouts, and resilient seafaring families.
+      </p>
+
+      <img src="roatan.sunset.2.jpg" alt="Santos Guardiola Historical Coastline" class="inline-image" />
+
+      <div class="article-section">
+        <h2><span class="section-number">1</span> Early Indigenous Inhabitants</h2>
+        <p>
+          Long before European ships reached the Caribbean, the eastern portion of Roatán was inhabited by indigenous Pech (Paya) peoples. They utilized the island's abundant natural resources, navigating the sheltered mangrove waterways for fishing, trading, and collecting shellfish.
+        </p>
+      </div>
+
+      <div class="article-section">
+        <h2><span class="section-number">2</span> The Golden Age of Pirates & Port Royal</h2>
+        <p>
+          During the 17th century, the deep natural harbors and concealed mangrove channels of East End Roatán became a legendary haven for buccaneers and privateers. Port Royal served as a strategic military base and shelter for famous pirates, including Henry Morgan and John Coxon. The protected inlets allowed pirate fleets to lay in wait and ambush passing Spanish treasure galleons.
+        </p>
+        <div class="highlight-box">
+          <strong>Historical Note:</strong> Fortifications were built at Port Royal by British forces to maintain control over the Bay Islands, leaving behind stone foundations and artifacts that can still be traced today.
+        </div>
+      </div>
+
+      <div class="article-section">
+        <h2><span class="section-number">3</span> Anglo-Caribbean Settlement & Caymanian Migration</h2>
+        <p>
+          Following periods of British administration in the 18th and 19th centuries, families from the Cayman Islands and other Caribbean territories began migrating to the East End. Settlers established communities in Oak Ridge, Jonesville, and surrounding bays, building homes over the water and creating thriving coconut, fishing, and boatbuilding industries.
+        </p>
+      </div>
+
+      <div class="article-section">
+        <h2><span class="section-number">4</span> Official Creation of the Municipality (1960)</h2>
+        <p>
+          As the island evolved under Honduran sovereignty, the Eastern District formally separated from Roatán's western municipality. On March 6, 1960, the municipality was officially established and named **Jose Santos Guardiola** in honor of Brigadier General José Santos Guardiola, the President of Honduras who officially signed the Wyke-Cruz Treaty of 1859, incorporating the Bay Islands into the Republic of Honduras.
+        </p>
+      </div>
+
+      <div class="article-section">
+        <h2><span class="section-number">5</span> Santos Guardiola Today</h2>
+        <p>
+          Oak Ridge serves as the municipal seat of Santos Guardiola, surrounded by unique communities like Jonesville, Punta Gorda, Politilly Bight, Diamond Rock, and Camp Bay. Today, the municipality remains the agricultural, fishing, and cultural heartbeat of Roatán, offering visitors a preserved look at true island history and traditional Caribbean living.
+        </p>
+      </div>
+
+      <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; border: 1px dashed var(--primary); text-align: center; margin-top: 3rem;">
+        <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem; font-weight: 800;">Experience the Heritage Firsthand</h3>
+        <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">Book a private tour to explore Port Royal, Oak Ridge, and Jonesville with local guides who grew up on these waters.</p>
+        <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="display: inline-flex;">
+          <i class="fa-brands fa-whatsapp"></i> Book Your Heritage Boat Tour on WhatsApp
+        </a>
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-widget promo-card">
+        <h3>Private East End Cultural Tour</h3>
+        <p>Custom boat charters departing directly from Jonesville. Discover pirate ruins, overwater communities, and real local culture.</p>
+        <a href="contact.html" class="btn-accent">Contact Us to Reserve</a>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3 class="widget-title">More Travel Articles</h3>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 1rem;">
+            <a href="blog-6-things-east-end.html" style="text-decoration: none; color: var(--dark-navy); font-weight: 700; font-size: 0.95rem;">
+              <i class="fa-solid fa-chevron-right" style="color: var(--primary); font-size: 0.8rem;"></i> 6 Things to Do in the East End of Roatan
+            </a>
+          </li>
+          <li>
+            <a href="blog-things-to-prepare-roatan.html" style="text-decoration: none; color: var(--dark-navy); font-weight: 700; font-size: 0.95rem;">
+              <i class="fa-solid fa-chevron-right" style="color: var(--primary); font-size: 0.8rem;"></i> Things to Prepare for When Traveling to Roatan
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
+        <p>Delivering authentic, premium, and custom island tours across Roatan, Honduras.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact & Booking</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Direct Booking Available
+            </a>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> Roatan, Bay Islands, Honduras</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roatan Island Style Tours. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
