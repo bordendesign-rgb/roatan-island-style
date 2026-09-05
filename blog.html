@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Island Travel Blog | Roatan Island Style Tours</title>
+
+  <!-- Essential SEO Meta Tags & Blog/ItemList Schema -->
+  <meta name="description" content="Discover local travel guides, island history, and essential travel tips for Roatán." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.roatanislandstyletours.com/blog.html" />
+  
+  <meta property="og:url" content="https://www.roatanislandstyletours.com/blog.html" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- FontAwesome for Mobile Menu Hamburger & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Roatan Island Style Tours Blog",
+    "description": "Local travel guides, island history, and essential travel tips for Roatán.",
+    "url": "https://www.roatanislandstyletours.com/blog.html",
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "6 Things to Do in the East End of Roatan",
+        "datePublished": "2026-08-20",
+        "author": {
+          "@type": "Organization",
+          "name": "Roatan Island Style Tours"
+        },
+        "description": "Escape the crowded West End resort strip and discover historic mangrove channels, authentic overwater fishing villages, serene beaches, and untouched natural beauty."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "A Brief History of Santos Guardiola",
+        "datePublished": "2026-08-20",
+        "author": {
+          "@type": "Organization",
+          "name": "Roatan Island Style Tours"
+        },
+        "description": "Explore the rich cultural heritage, ancient pirate havens, and historic settlement stories behind the eastern municipality of Santos Guardiola."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Things to Prepare for When Traveling to Roatan",
+        "datePublished": "2026-08-20",
+        "author": {
+          "@type": "Organization",
+          "name": "Roatan Island Style Tours"
+        },
+        "description": "Essential tips to prepare before landing in Roatán: packing advice, local currency, transportation secrets, island etiquette, and cruise port planning."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="rist.logo.jpg" />
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #f97316;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --dark-navy: #0f172a;
+      --card-bg: #ffffff;
+      --light-bg: #f8fafc;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--dark-navy);
+      color: #94a3b8;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 1.5rem;
+    }
+
+    .top-bar-info i {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .top-bar-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-bar-socials a {
+      color: #94a3b8;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .top-bar-socials a:hover {
+      color: #ffffff;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links li {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      padding: 0.5rem 0.25rem;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white !important;
+      padding: 0.65rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--dark-navy);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 45vh;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.85) 100%), 
+                  url('roatan.ocean.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 4rem 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #e2e8f0;
+      font-weight: 400;
+    }
+
+    /* Main Container Layout */
+    .blog-container {
+      max-width: 1280px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 2.5rem;
+    }
+
+    /* Blog Feed List */
+    .blog-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    /* Article Preview Card */
+    .article-preview-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f1f5f9;
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-preview-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .article-img-wrapper {
+      position: relative;
+      height: 320px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .article-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .article-preview-card:hover .article-img-wrapper img {
+      transform: scale(1.03);
+    }
+
+    .article-tag {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .article-content {
+      padding: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .article-meta i {
+      color: var(--primary);
+    }
+
+    .article-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .article-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .article-title a:hover {
+      color: var(--primary);
+    }
+
+    .article-excerpt {
+      font-size: 1rem;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .btn-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn-read-more:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Sidebar Widgets */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar-widget {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f1f5f9;
+    }
+
+    .widget-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .widget-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .author-widget {
+      text-align: center;
+    }
+
+    .author-widget img {
+      height: 80px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+
+    .author-widget h4 {
+      font-weight: 700;
+      color: var(--dark-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .author-widget p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .author-link {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .author-link:hover {
+      color: var(--primary-dark);
+    }
+
+    .promo-widget {
+      background: var(--dark-navy);
+      color: white;
+    }
+
+    .promo-widget .widget-title {
+      color: white;
+    }
+
+    .promo-widget p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-accent {
+      display: block;
+      text-align: center;
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: white;
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+      transition: var(--transition);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-navy);
+      color: #94a3b8;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 2rem auto 0 auto;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .blog-container {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
+
+      .top-bar-info span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .article-img-wrapper {
+        height: 220px;
+      }
+
+      .article-content {
+        padding: 1.5rem;
+      }
+
+      .article-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span><i class="fa-solid fa-location-dot"></i> Roatan, Honduras</span>
+      <span><i class="fa-solid fa-envelope"></i> info@roatanislandstyletours.com</span>
+    </div>
+    <div class="top-bar-socials">
+      <a href="https://www.facebook.com/roatanislandstyletours" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/roatanislandstyletours/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tripadvisor.com/Attraction_Review-g292019-d20152283-Reviews-Roatan_Island_Style_Tours-Roatan_Bay_Islands.html" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+        <img src="https://cdn.simpleicons.org/tripadvisor/94a3b8" alt="TripAdvisor" style="width: 16px; height: 16px; vertical-align: middle;">
+      </a>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo-container">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo" class="logo-img">
+      </a>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="margin-top:0; width:100%; max-width:100%;">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-compass" style="color: #f59e0b;"></i> Island Guides & Insights
+      </div>
+      <h1>Island Travel Blog</h1>
+      <p>Insider travel guides, stories, and authentic island experiences from Roatán.</p>
+    </div>
+  </section>
+
+  <div class="blog-container">
+    
+    <main class="blog-feed">
+      
+      <article class="article-preview-card">
+        <div class="article-img-wrapper">
+          <img src="mangrove.tunnel.tour.6.jpg" alt="Mangrove Tunnel Tour East End Roatan">
+          <span class="article-tag">Island Guide</span>
+        </div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span><i class="fa-regular fa-calendar"></i> August 20, 2026</span>
+            <span><i class="fa-regular fa-user"></i> Roatan Island Style Tours</span>
+            <span><i class="fa-regular fa-clock"></i> 5 Min Read</span>
+          </div>
+          <h2 class="article-title">
+            <a href="blog-6-things-east-end.html">6 Things to Do in the East End of Roatan</a>
+          </h2>
+          <p class="article-excerpt">
+            Escape the crowded West End resort strip and discover historic mangrove channels, authentic overwater fishing villages, serene beaches, and untouched natural beauty.
+          </p>
+          <a href="blog-6-things-east-end.html" class="btn-read-more">
+            Read Full Article <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="article-preview-card">
+        <div class="article-img-wrapper">
+          <img src="roatan.sunset.2.jpg" alt="Roatan Sunset View">
+          <span class="article-tag">History & Culture</span>
+        </div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span><i class="fa-regular fa-calendar"></i> August 20, 2026</span>
+            <span><i class="fa-regular fa-user"></i> Roatan Island Style Tours</span>
+            <span><i class="fa-regular fa-clock"></i> 4 Min Read</span>
+          </div>
+          <h2 class="article-title">
+            <a href="blog-history-santos-guardiola.html">A Brief History of Santos Guardiola</a>
+          </h2>
+          <p class="article-excerpt">
+            Explore the rich cultural heritage, ancient pirate havens, and historic settlement stories behind the eastern municipality of Santos Guardiola.
+          </p>
+          <a href="blog-history-santos-guardiola.html" class="btn-read-more">
+            Read Full Article <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="article-preview-card">
+        <div class="article-img-wrapper">
+          <img src="roatan.chocolate.factory.2.jpg" alt="Traveling to Roatan">
+          <span class="article-tag">Travel Tips</span>
+        </div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span><i class="fa-regular fa-calendar"></i> August 20, 2026</span>
+            <span><i class="fa-regular fa-user"></i> Roatan Island Style Tours</span>
+            <span><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+          </div>
+          <h2 class="article-title">
+            <a href="blog-things-to-prepare-roatan.html">Things to Prepare for When Traveling to Roatan</a>
+          </h2>
+          <p class="article-excerpt">
+            Essential tips to prepare before landing in Roatán: packing advice, local currency, transportation secrets, island etiquette, and cruise port planning.
+          </p>
+          <a href="blog-things-to-prepare-roatan.html" class="btn-read-more">
+            Read Full Article <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+    </main>
+
+    <aside class="sidebar">
+      
+      <div class="sidebar-widget author-widget">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
+        <h4>Roatan Island Style Tours</h4>
+        <p>Locally owned and operated tour guide service based in Jonesville, Santos Guardiola. We show you the authentic Roatán!</p>
+        <a href="about.html" class="author-link">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="sidebar-widget promo-widget">
+        <h3 class="widget-title">Custom Island Charters</h3>
+        <p>Want a personalized itinerary tailored to your cruise schedule or vacation stay? We handle private island transportation and custom charters.</p>
+        <a href="contact.html" class="btn-accent">Plan Your Tour</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="rist.logo.jpg" alt="Roatan Island Style Tours Logo">
+        <p>Delivering authentic, premium, and custom island tours across Roatan, Honduras.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact & Booking</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/50493400993" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Direct Booking Available
+            </a>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> Roatan, Bay Islands, Honduras</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roatan Island Style Tours. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
