@@ -147,6 +147,88 @@
       overflow-x: hidden;
     }
 
+    /* Terms & Conditions Banner Styling */
+.terms-banner {
+  max-width: 1200px;
+  margin: 1.5rem auto 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.terms-card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid var(--accent); /* Orange accent bar matching the top card */
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.terms-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.terms-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.terms-content i {
+  color: var(--accent);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.terms-content p {
+  margin: 0;
+  color: var(--dark-navy);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btn-terms {
+  background: var(--dark-navy);
+  color: #ffffff;
+  padding: 0.65rem 1.4rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.btn-terms:hover {
+  background: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.25);
+}
+
+@media (max-width: 768px) {
+  .terms-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .terms-content {
+    flex-direction: column;
+  }
+}
+
     /* Top Bar */
     .top-bar {
       background-color: var(--dark-navy);
@@ -761,12 +843,27 @@
     </div>
 
     <!-- Inclusions Highlight Banner -->
-    <div class="inclusions-banner">
-      <div class="inclusions-card">
-        <i class="fa-solid fa-circle-check"></i>
-        <p>All tours include a cooler with water, soda, beer, fruits & snacks, snorkeling gear and life vests onboard, maximum capacity 8 people.</p>
-      </div>
+<div class="inclusions-banner">
+  <div class="inclusions-card">
+    <i class="fa-solid fa-circle-check"></i>
+    <p>All tours include a cooler with water, soda, beer, fruits & snacks, snorkeling gear and life vests onboard, maximum capacity 8 people.</p>
+  </div>
+</div>
+
+<!-- Terms & Conditions Banner -->
+<div class="terms-banner" style="margin-top: 1.5rem;">
+  <div class="terms-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
+    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 280px;">
+      <i class="fa-solid fa-file-contract" style="color: var(--primary); font-size: 1.5rem; flex-shrink: 0;"></i>
+      <p style="margin: 0; color: var(--text-main); font-weight: 600; font-size: 0.95rem;">
+        Please review our tour policies, cancellation guidelines, and passenger safety guidelines prior to booking.
+      </p>
     </div>
+    <a href="terms.html" class="btn-terms" style="background: transparent; color: var(--primary); border: 2px solid var(--primary); padding: 0.6rem 1.25rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: var(--transition); white-space: nowrap; display: inline-flex; align-items: center; gap: 8px;">
+      <i class="fa-solid fa-arrow-right"></i> Terms & Conditions
+    </a>
+  </div>
+</div>
 
     <!-- Tours Listing -->
     <section>
@@ -968,16 +1065,16 @@
 <div class="tour-card">
   <div class="slideshow-container" id="slideshow-5">
     <div class="slide active">
-      <img src="water-bike-1.jpeg" alt="East End Water Bike Adventure - Jonesville Waters">
+      <img src="water-bike-2.jpeg" alt="East End Water Bike Adventure - Jonesville Waters">
     </div>
     <div class="slide">
-      <img src="water-bike-2.jpeg" alt="East End Water Bike Adventure - Coastal Exploring" loading="lazy">
+      <img src="water-bike-6.jpeg" alt="East End Water Bike Adventure - Coastal Exploring" loading="lazy">
     </div>
     <div class="slide">
-      <img src="water-bike-3.jpeg" alt="East End Water Bike Adventure - Fun on the Water" loading="lazy">
+      <img src="water-bike-7.jpeg" alt="East End Water Bike Adventure - Fun on the Water" loading="lazy">
     </div>
     <div class="slide">
-      <img src="water-bike-4.jpeg" alt="East End Water Bike Adventure - Ocean Ride" loading="lazy">
+      <img src="water-bike-8.jpeg" alt="East End Water Bike Adventure - Ocean Ride" loading="lazy">
     </div>
 
     <button class="prev-btn" onclick="changeSlide('slideshow-5', -1)" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
@@ -1022,7 +1119,7 @@
     <div class="tour-footer">
       <div class="tour-price-box">
         <span class="tour-price-lbl">Pricing</span>
-        <span class="tour-price-val">$35.00 <small style="font-size: 0.75rem; font-weight: 500;">/ person</small></span>
+        <span class="tour-price-val">$35.00 <small style="font-size: 0.75rem; font-weight: 500;">/ adult</small> &bull; $25.00 <small style="font-size: 0.75rem; font-weight: 500;">/ kid</small></span>
       </div>
       <a href="contact.html?tour=East%20End%20Water%20Bike%20Adventure" class="btn-book">
         Book Now <i class="fa-solid fa-arrow-right"></i>
